@@ -10,9 +10,9 @@ public class SpreadTilemap : MonoBehaviour
     [SerializeField]
     private Tilemap wall; //타일맵 오브젝트
     [SerializeField]
-    private Tilemap floorTile; //사용할 타일 에셋
+    private TileBase floorTile; //사용할 타일 에셋
     [SerializeField]
-    private Tilemap wallTile;  //사용할 타일 에셋
+    private TileBase wallTile;  //사용할 타일 에셋
 
     public void SpreadFloorTilemap (HashSet<Vector2Int> positions)
     {
