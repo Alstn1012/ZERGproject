@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectArrayExample : MonoBehaviour
 {
-    public string prefabTag = "Room";
+    public string Tag = "Room";
     public int arraySize = 8;
 
     private GameObject[] gameObjectsArray;
@@ -16,7 +16,7 @@ public class ObjectArrayExample : MonoBehaviour
         // 배열에 태그를 기반으로 게임 오브젝트 할당
         for (int i = 0; i < arraySize; i++)
         {
-            string tagName = prefabTag + (i + 1); // "Room1", "Room2", ..., "Room8" 등의 태그를 하는거에용
+            string tagName = Tag + (i + 1); // "Room1", "Room2", ..., "Room8" 등의 태그를 하는거에용
             GameObject obj = GameObject.FindGameObjectWithTag(tagName);
 
             if (obj != null)
