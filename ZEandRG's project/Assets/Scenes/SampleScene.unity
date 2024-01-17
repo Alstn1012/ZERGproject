@@ -691,7 +691,7 @@ GameObject:
   - component: {fileID: 331653643}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -822,6 +822,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  jumpPower: 5
+  jumpLimit: 2
 --- !u!58 &365646390
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -939,7 +941,7 @@ GameObject:
   - component: {fileID: 375164118}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1185,7 +1187,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1485,7 +1487,7 @@ GameObject:
   - component: {fileID: 680654658}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1707,7 +1709,7 @@ GameObject:
   - component: {fileID: 770182801}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2665,7 +2667,7 @@ GameObject:
   - component: {fileID: 1262794018}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3471,7 +3473,7 @@ GameObject:
   - component: {fileID: 1768530707}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3582,7 +3584,7 @@ GameObject:
   - component: {fileID: 1769877174}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4072,7 +4074,7 @@ GameObject:
   - component: {fileID: 1979869370}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

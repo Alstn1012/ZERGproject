@@ -8,6 +8,7 @@ public class playerStatus : MonoBehaviour
     public bool whileInvincible;
     public bool isDash;
     public int playerHp=3;
+    public GameObject player;
     public static playerStatus instance;
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class playerStatus : MonoBehaviour
         if (playerHp == 0)
         {
             isAlive= false;
+            Destroy(player);
         }
     }
 }
