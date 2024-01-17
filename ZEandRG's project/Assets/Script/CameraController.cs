@@ -35,8 +35,9 @@ public class CameraController : MonoBehaviour
     void LimitCameraArea()
     {
         transform.position = Vector3.Lerp(transform.position,
-                                          playerTransform.position + cameraPosition,
-                                          Time.deltaTime * cameraMoveSpeed);
+            playerTransform.position + cameraPosition,
+            Time.deltaTime * cameraMoveSpeed);
+
         float lx = mapSize.x - width;
         float clampX = Mathf.Clamp(transform.position.x, -lx + center.x, lx + center.x);
 

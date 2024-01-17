@@ -18,12 +18,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        // ÇÃ·¹ÀÌ¾î ÀÌµ¿
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½Ìµï¿½
         playerMove();
         playerJump();
     }
     void playerMove()
-    {
         float horizontalInput = Input.GetAxis("Horizontal");
         Vector2 moveDirection = new Vector2(horizontalInput, 0);
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
