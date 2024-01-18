@@ -10,10 +10,12 @@ public class Player : MonoBehaviour
     public int jumpLimit = 2;
     private int jumpCount = 0;
     private Rigidbody2D rb;
+    private SpriteRenderer rend;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rend = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -25,6 +27,14 @@ public class Player : MonoBehaviour
     void playerMove() {
         float horizontalInput = Input.GetAxis("Horizontal");
         Vector2 moveDirection = new Vector2(horizontalInput, 0);
+        if (horizontalInput > 0)
+        {
+            rend.flipX= false;
+        }
+        else if(horizontalInput < 0)
+        {
+            rend.flipX= true;
+        }
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
     }
     void playerJump()
