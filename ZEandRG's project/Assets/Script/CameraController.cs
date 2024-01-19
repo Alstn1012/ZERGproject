@@ -19,7 +19,7 @@ public class CameraController : MonoBehaviour
     float height;
     float width;
 
-    void Start()
+    public void Start()
     {
         playerTransform = GameObject.Find("Player").GetComponent<Transform>();
 
@@ -27,7 +27,7 @@ public class CameraController : MonoBehaviour
         width = height * Screen.width / Screen.height;
     }
 
-    void FixedUpdate()
+    public void FixedUpdate()
     {
         LimitCameraArea();
     }

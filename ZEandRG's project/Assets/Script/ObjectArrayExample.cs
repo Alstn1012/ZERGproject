@@ -7,9 +7,14 @@ public class ObjectArrayExample : MonoBehaviour
     public string Tag = "Room";
     public int arraySize = 8;
 
-    private GameObject[] gameObjectsArray;
+    public GameObject[] gameObjectsArray;
 
-    private void Start()
+    public void Start()
+    {
+        ChooseRandomRoom();
+    }
+
+    public void ChooseRandomRoom()
     {
         gameObjectsArray = new GameObject[arraySize];
 
