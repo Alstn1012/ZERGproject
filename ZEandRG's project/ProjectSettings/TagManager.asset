@@ -15,6 +15,7 @@ TagManager:
   - floor
   - enemy
   - bullet
+  - Portal
   layers:
   - Default
   - TransparentFX
