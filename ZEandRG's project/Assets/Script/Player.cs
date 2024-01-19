@@ -18,11 +18,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        // �÷��̾� �̵�
         playerMove();
         playerJump();
     }
-    void playerMove()
+    void playerMove() { 
         float horizontalInput = Input.GetAxis("Horizontal");
         Vector2 moveDirection = new Vector2(horizontalInput, 0);
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
