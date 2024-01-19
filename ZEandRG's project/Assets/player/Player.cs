@@ -20,18 +20,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-<<<<<<< HEAD:ZEandRG's project/Assets/Script/Player.cs
-        playerMove();
-        playerJump();
-    }
-    void playerMove() { 
-=======
-        // 플레이어 이동
         playerMove();
         playerJump();
     }
     void playerMove() {
->>>>>>> 24786018d592bb6e1743d471bb5f182b1e3969e8:ZEandRG's project/Assets/player/Player.cs
         float horizontalInput = Input.GetAxis("Horizontal");
         Vector2 moveDirection = new Vector2(horizontalInput, 0);
         if (horizontalInput > 0)

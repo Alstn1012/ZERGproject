@@ -802,7 +802,7 @@ GameObject:
   - component: {fileID: 337401160}
   - component: {fileID: 337401159}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1405,7 +1405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 365646392}
-  cameraPosition: {x: 0, y: 4.2, z: -10}
+  cameraPosition: {x: 0, y: 3.5, z: -10}
   center: {x: 0, y: 0}
   mapSize: {x: 18, y: 10}
   cameraMoveSpeed: 5
@@ -1755,7 +1755,7 @@ GameObject:
   - component: {fileID: 697682936}
   - component: {fileID: 697682935}
   m_Layer: 0
-  m_Name: Square (2)
+  m_Name: Enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3450,8 +3450,8 @@ GameObject:
   - component: {fileID: 1446083819}
   - component: {fileID: 1446083818}
   m_Layer: 0
-  m_Name: Square (1)
-  m_TagString: bullet
+  m_Name: Enemy
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
