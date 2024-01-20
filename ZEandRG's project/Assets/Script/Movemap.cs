@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movemap : MonoBehaviour
 {
     ObjectArrayExample chooseRandomRoom;
+    public bool movemap = false;
 
     private void Start()
     {
@@ -20,10 +21,13 @@ public class Movemap : MonoBehaviour
     {
         if (collision.collider.gameObject.CompareTag("Player"))
         {
+            movemap = true;
             chooseRandomRoom = GameObject.Find("ObjectArrayExample").GetComponent<ObjectArrayExample>();
             chooseRandomRoom.Tag = "Room";
             chooseRandomRoom.arraySize = 8;
             chooseRandomRoom.ChooseRandomRoom();
+            movemap = false;
         }
     }
 }
+

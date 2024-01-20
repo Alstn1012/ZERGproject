@@ -8,12 +8,13 @@ public class ObjectArrayExample : MonoBehaviour
     public int arraySize = 8;
 
     public GameObject[] gameObjectsArray;
+    Movemap destroy;
 
     public void Start()
     {
+        destroy = GetComponent<Movemap>();
         ChooseRandomRoom();
     }
-    
 
     public void ChooseRandomRoom()
     {
@@ -36,7 +37,12 @@ public class ObjectArrayExample : MonoBehaviour
         }
 
         int randomIndex = Random.Range(0, arraySize);
-
         gameObjectsArray[randomIndex].transform.position = new Vector2(0, 0);
+
+        if (destroy.movemap == true)
+        {
+            Destroy(gameObjectsArray[randomIndex]);
+        }
     }
+
 }
