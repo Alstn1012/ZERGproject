@@ -13,6 +13,7 @@ public class ObjectArrayExample : MonoBehaviour
     {
         ChooseRandomRoom();
     }
+    
 
     public void ChooseRandomRoom()
     {
