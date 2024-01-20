@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movemap : MonoBehaviour
 {
-    ObjectArrayExample chooseRandomRoom;
+    [SerializeField] ObjectArrayExample chooseRandomRoom;
     public bool movemap = false;
 
     private void Start()
@@ -19,12 +19,12 @@ public class Movemap : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.gameObject.CompareTag("Player"))
+        if (collision.collider.gameObject.CompareTag("Player") && movemap == false) 
         {
             movemap = true;
-            chooseRandomRoom = GameObject.Find("ObjectArrayExample").GetComponent<ObjectArrayExample>();
+/*            chooseRandomRoom = GameObject.Find("ObjectArrayExample").GetComponent<ObjectArrayExample>();
             chooseRandomRoom.Tag = "Room";
-            chooseRandomRoom.arraySize = 8;
+            chooseRandomRoom.arraySize = 8;*/
             chooseRandomRoom.ChooseRandomRoom();
             movemap = false;
         }
