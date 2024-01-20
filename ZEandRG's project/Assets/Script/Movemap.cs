@@ -4,30 +4,26 @@ using UnityEngine;
 
 public class Movemap : MonoBehaviour
 {
-    private ObjectArrayExample chooseRandomRoom;
+    ObjectArrayExample chooseRandomRoom;
 
-    // Start 메서드에서 chooseRandomRoom 초기화
     private void Start()
     {
-        chooseRandomRoom = GetComponent<ObjectArrayExample>();
-        if (chooseRandomRoom == null)
-        {
-            Debug.LogError("ObjectArrayExample component not found!");
-        }
+        
+    }
+
+    private void Update()
+    {
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.collider.gameObject.CompareTag("Player"))
         {
-            if (chooseRandomRoom != null)
-            {
-                chooseRandomRoom.ChooseRandomRoom();
-            }
-            else
-            {
-                Debug.LogError("ObjectArrayExample component not initialized!");
-            }
+            chooseRandomRoom = GameObject.Find("ObjectArrayExample").GetComponent<ObjectArrayExample>();
+            chooseRandomRoom.Tag = "Room";
+            chooseRandomRoom.arraySize = 8;
+            chooseRandomRoom.ChooseRandomRoom();
         }
     }
 }
