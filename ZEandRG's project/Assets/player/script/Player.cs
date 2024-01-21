@@ -12,9 +12,9 @@ public class Player : MonoBehaviour
     private int jumpCount = 0;
 
     private bool canDash = true;
-    private float dashPower = 25f;
-    private float dashingTime = 0.2f;
-    private float dashCool = 1f;
+    public float dashPower = 30f;
+    public float dashingTime = 0.15f;
+    public float dashCool = 1f;
 
     private Rigidbody2D rb;
     private SpriteRenderer rend;
@@ -95,6 +95,7 @@ public class Player : MonoBehaviour
     private IEnumerator dash()
     {
         canDash = false;
+        playerStatus.instance.whileInvincible= true;
         playerStatus.instance.isDash= true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
@@ -103,6 +104,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(dashingTime);
         trail.emitting = false;
         rb.gravityScale = originalGravity;
+        playerStatus.instance.whileInvincible = false;
         playerStatus.instance.isDash= false;
         yield return new WaitForSeconds(dashCool);
         canDash= true;

@@ -7,11 +7,12 @@ public class playerCollision : MonoBehaviour
     public float invincibleTimeLimit=1f;
     private float invincibleTime;
     private float blinkTime;
+    private bool isAttacked;
     private void blink(float limit)
     {
         if (blinkTime < limit/8.0f)
         {
-            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1 - 0.6f);
+            GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 1);
         }
         else
         {
@@ -32,12 +33,17 @@ public class playerCollision : MonoBehaviour
                 Destroy(collision.gameObject);
                 playerStatus.instance.playerHp -= 1;
                 playerStatus.instance.whileInvincible = true;
+                isAttacked= true;
             }
         }
     }
+    void Start()
+    {
+        isAttacked= false;
+    }
     void Update()
     {
-        if (playerStatus.instance.whileInvincible== true)
+        if (isAttacked == true)
         {
             if (invincibleTime < invincibleTimeLimit)
             {
@@ -46,8 +52,9 @@ public class playerCollision : MonoBehaviour
             }
             else
             {
-                invincibleTime= 0;
-                playerStatus.instance.whileInvincible= false;
+                invincibleTime = 0;
+                playerStatus.instance.whileInvincible = false;
+                isAttacked = false;
             }
         }
     }
