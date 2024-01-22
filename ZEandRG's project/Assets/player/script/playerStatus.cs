@@ -6,6 +6,7 @@ public class playerStatus : MonoBehaviour
 {
     public bool isAlive;
     public bool whileInvincible;
+    public float invincibleTime;
     public bool isDash;
     public int playerHp=3;
     public GameObject player;
@@ -22,6 +23,7 @@ public class playerStatus : MonoBehaviour
         isAlive= true;
         isDash= false;
         whileInvincible= false;
+        invincibleTime= 0f;
     }
     void Update()
     {

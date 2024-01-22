@@ -5,7 +5,6 @@ using UnityEngine;
 public class Collision : MonoBehaviour
 {
     public float invincibleTimeLimit=1f;
-    private float invincibleTime;
     private float blinkTime;
     private bool isAttacked;
     private void blink(float limit)
@@ -45,14 +44,14 @@ public class Collision : MonoBehaviour
     {
         if (isAttacked == true)
         {
-            if (invincibleTime < invincibleTimeLimit)
+            if (playerStatus.instance.invincibleTime < invincibleTimeLimit)
             {
-                invincibleTime += Time.deltaTime;
+                playerStatus.instance.invincibleTime += Time.deltaTime;
                 blink(invincibleTimeLimit);
             }
             else
             {
-                invincibleTime = 0;
+                playerStatus.instance.invincibleTime = 0;
                 playerStatus.instance.whileInvincible = false;
                 isAttacked = false;
             }

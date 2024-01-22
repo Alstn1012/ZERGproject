@@ -38,8 +38,6 @@ public class Player : MonoBehaviour
         playerJump();
         playerDash();
 
-        passThrough();
-
         float horizontalInput = Input.GetAxis("Horizontal");
         // 플레이어가 움직일 때
         if (Mathf.Abs(horizontalInput) > 0.1f)
@@ -96,8 +94,11 @@ public class Player : MonoBehaviour
     private IEnumerator dash()
     {
         canDash = false;
-        playerStatus.instance.whileInvincible= true;
-        playerStatus.instance.isDash= true;
+        playerStatus.instance.isDash = true;
+        if (playerStatus.instance.invincibleTime==0f)
+        {
+            playerStatus.instance.whileInvincible = true;
+        }
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashPower, 0f);
@@ -105,36 +106,12 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(dashingTime);
         trail.emitting = false;
         rb.gravityScale = originalGravity;
-        playerStatus.instance.whileInvincible = false;
+        if (playerStatus.instance.invincibleTime == 0f)
+        {
+            playerStatus.instance.whileInvincible = false;
+        }
         playerStatus.instance.isDash= false;
         yield return new WaitForSeconds(dashCool);
         canDash= true;
-    }
-    private void passThrough()
-    {
-        if (playerStatus.instance.whileInvincible == true)
-        {
-            this.gameObject.layer= 3;
-            if (GameObject.FindWithTag("enemy").activeSelf==true)
-            {
-                GameObject.FindWithTag("enemy").layer = 6;
-            }
-            if (GameObject.FindWithTag("bullet").activeSelf == true)
-            {
-                GameObject.FindWithTag("bullet").layer = 6;
-            }
-        }
-        else
-        {
-            this.gameObject.layer= 0;
-            if (GameObject.FindWithTag("enemy").activeSelf == true)
-            {
-                GameObject.FindWithTag("enemy").layer = 0;
-            }
-            if (GameObject.FindWithTag("bullet").activeSelf == true)
-            {
-                GameObject.FindWithTag("bullet").layer = 0;
-            }
-        }
     }
 }
