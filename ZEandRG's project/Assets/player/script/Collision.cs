@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerCollision : MonoBehaviour
+public class Collision : MonoBehaviour
 {
     public float invincibleTimeLimit=1f;
     private float invincibleTime;
@@ -30,10 +30,10 @@ public class playerCollision : MonoBehaviour
         {
             if (playerStatus.instance.whileInvincible == false)
             {
-                Destroy(collision.gameObject);
+                collision.gameObject.SetActive(false);
                 playerStatus.instance.playerHp -= 1;
                 playerStatus.instance.whileInvincible = true;
-                isAttacked= true;
+                isAttacked = true;
             }
         }
     }

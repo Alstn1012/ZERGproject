@@ -38,8 +38,9 @@ public class Player : MonoBehaviour
         playerJump();
         playerDash();
 
-        float horizontalInput = Input.GetAxis("Horizontal");
+        passThrough();
 
+        float horizontalInput = Input.GetAxis("Horizontal");
         // 플레이어가 움직일 때
         if (Mathf.Abs(horizontalInput) > 0.1f)
         {
@@ -108,5 +109,32 @@ public class Player : MonoBehaviour
         playerStatus.instance.isDash= false;
         yield return new WaitForSeconds(dashCool);
         canDash= true;
+    }
+    private void passThrough()
+    {
+        if (playerStatus.instance.whileInvincible == true)
+        {
+            this.gameObject.layer= 3;
+            if (GameObject.FindWithTag("enemy").activeSelf==true)
+            {
+                GameObject.FindWithTag("enemy").layer = 6;
+            }
+            if (GameObject.FindWithTag("bullet").activeSelf == true)
+            {
+                GameObject.FindWithTag("bullet").layer = 6;
+            }
+        }
+        else
+        {
+            this.gameObject.layer= 0;
+            if (GameObject.FindWithTag("enemy").activeSelf == true)
+            {
+                GameObject.FindWithTag("enemy").layer = 0;
+            }
+            if (GameObject.FindWithTag("bullet").activeSelf == true)
+            {
+                GameObject.FindWithTag("bullet").layer = 0;
+            }
+        }
     }
 }
