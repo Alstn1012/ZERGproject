@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerCollision : MonoBehaviour
+public class Collision : MonoBehaviour
 {
     public float invincibleTimeLimit=1f;
-    private float invincibleTime;
     private float blinkTime;
+    private bool isAttacked;
     private void blink(float limit)
     {
         if (blinkTime < limit/8.0f)
         {
-            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1 - 0.6f);
+            GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 1);
         }
         else
         {
@@ -29,25 +29,31 @@ public class playerCollision : MonoBehaviour
         {
             if (playerStatus.instance.whileInvincible == false)
             {
-                Destroy(collision.gameObject);
+                collision.gameObject.SetActive(false);
                 playerStatus.instance.playerHp -= 1;
                 playerStatus.instance.whileInvincible = true;
+                isAttacked = true;
             }
         }
     }
+    void Start()
+    {
+        isAttacked= false;
+    }
     void Update()
     {
-        if (playerStatus.instance.whileInvincible== true)
+        if (isAttacked == true)
         {
-            if (invincibleTime < invincibleTimeLimit)
+            if (playerStatus.instance.invincibleTime < invincibleTimeLimit)
             {
-                invincibleTime += Time.deltaTime;
+                playerStatus.instance.invincibleTime += Time.deltaTime;
                 blink(invincibleTimeLimit);
             }
             else
             {
-                invincibleTime= 0;
-                playerStatus.instance.whileInvincible= false;
+                playerStatus.instance.invincibleTime = 0;
+                playerStatus.instance.whileInvincible = false;
+                isAttacked = false;
             }
         }
     }

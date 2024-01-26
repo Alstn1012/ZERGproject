@@ -6,17 +6,6 @@ public class Movemap : MonoBehaviour
 {
     [SerializeField] ObjectArrayExample chooseRandomRoom;
     public bool movemap = false;
-
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.CompareTag("Player") && movemap == false) 
@@ -26,6 +15,7 @@ public class Movemap : MonoBehaviour
             chooseRandomRoom.Tag = "Room";
             chooseRandomRoom.arraySize = 8;*/
             chooseRandomRoom.ChooseRandomRoom();
+            GameObject.FindWithTag("Player").transform.position = new Vector3(-10f, -3f, 0f);
             movemap = false;
         }
     }
