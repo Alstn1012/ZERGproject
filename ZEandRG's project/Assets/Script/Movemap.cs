@@ -22,7 +22,7 @@ public class Movemap : MonoBehaviour
         if (collision.collider.gameObject.CompareTag("Player") && movemap == false) 
         {
             movemap = true;
-/*            chooseRandomRoom = GameObject.Find("ObjectArrayExample").GetComponent<ObjectArrayExample>();
+            /*chooseRandomRoom = GameObject.Find("ObjectArrayExample").GetComponent<ObjectArrayExample>();
             chooseRandomRoom.Tag = "Room";
             chooseRandomRoom.arraySize = 8;*/
             chooseRandomRoom.ChooseRandomRoom();
