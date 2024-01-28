@@ -40,17 +40,13 @@ public class playerHp : MonoBehaviour
     }**/
     private void hp()
     {
-        if(playerStatus.instance.isCollision==true)
+        for (int i = 0; i < 3; i++)
         {
-            for(int i=0;i<6;i++)
+            transform.GetChild(i).gameObject.GetComponent<Image>().color = new Color(132f / 255f, 132f / 255f, 132f / 255f, 180f / 225f);
+            if (i >= playerStatus.instance.playerHpLimit - playerStatus.instance.playerHp)
             {
-                transform.GetChild(3+i).gameObject.GetComponent<Image>().color = new Color(132f/255f, 132f/255f, 132f / 255f, 180f/225f);
-                if(i >= playerStatus.instance.playerHpLimit - playerStatus.instance.playerHp)
-                {
-                    transform.GetChild(3+i).gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
-                }
+                transform.GetChild(i).gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
             }
-            playerStatus.instance.isCollision = false;
         }
     }
     void Update()

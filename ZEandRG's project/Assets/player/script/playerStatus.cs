@@ -7,7 +7,10 @@ public class playerStatus : MonoBehaviour
     public bool isAlive;
     public bool whileInvincible;
     public bool isDash;
-    public bool isCollision;
+    public bool ispanelActive;
+    public bool isMapChange;
+    public bool pausePanelOff;
+    public bool exitPanelOff;
     public float invincibleTime;
     public int playerHpLimit = 3;
     public int playerHp=3;

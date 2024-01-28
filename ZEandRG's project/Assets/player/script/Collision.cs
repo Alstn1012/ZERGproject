@@ -32,7 +32,6 @@ public class Collision : MonoBehaviour
                 collision.gameObject.SetActive(false);
                 playerStatus.instance.playerHp -= 1;
                 playerStatus.instance.whileInvincible = true;
-                playerStatus.instance.isCollision= true;
                 isAttacked = true;
             }
         }
