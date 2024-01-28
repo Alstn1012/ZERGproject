@@ -1593,6 +1593,7 @@ MonoBehaviour:
   dashPower: 30
   dashingTime: 0.15
   dashCool: 0.5
+  pos: {fileID: 707696044}
   trail: {fileID: 365646399}
 --- !u!212 &365646391
 SpriteRenderer:
@@ -1864,6 +1865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1773185542483053200, guid: ff9eddb392ec5514cbce99dd0473b985, type: 3}
+  Bulletpos: {fileID: 707696044}
   pos: {fileID: 707696045}
   Cooldown: 1
 --- !u!1 &375164116
@@ -5196,7 +5198,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 556.93274, y: 239.82645}
+  m_AnchoredPosition: {x: 553.1561, y: 284.00275}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1324593042
@@ -5739,7 +5741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 614.58887, y: 239.82645}
+  m_AnchoredPosition: {x: 605.9999, y: 284}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407353029
@@ -6031,7 +6033,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 499.27637, y: 239.82645}
+  m_AnchoredPosition: {x: 495.4999, y: 284.00275}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1562634188

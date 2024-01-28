@@ -13,10 +13,16 @@ public class Player_attack : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time > Shoot_Time + Cooldown)
+        if (!playerStatus.instance.isDash)
         {
-            Instantiate(bullet,pos.position,Bulletpos.transform.rotation);
-            Shoot_Time = Time.time;
+            if (Input.GetMouseButtonDown(0) && Time.time > Shoot_Time + Cooldown)
+            {
+                if (!playerStatus.instance.ispanelActive)
+                {
+                    Instantiate(bullet, pos.position, Bulletpos.transform.rotation);
+                    Shoot_Time = Time.time;
+                }
+            }
         }
     }
 
