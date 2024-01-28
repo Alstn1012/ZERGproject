@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_attack : MonoBehaviour
 {
     public GameObject bullet;
+    public GameObject Bulletpos;
     public Transform pos; // 발사체의 방향
     public float Cooldown = 1f; // 발사체의 쿨타임 (1초)
 
@@ -14,7 +15,7 @@ public class Player_attack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && Time.time > Shoot_Time + Cooldown)
         {
-            Instantiate(bullet,pos.position,transform.rotation);
+            Instantiate(bullet,pos.position,Bulletpos.transform.rotation);
             Shoot_Time = Time.time;
         }
     }
