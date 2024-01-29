@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer rend;
     private Animator anim; // 에니메이터 변수 선언
+    public GameObject pos;
     [SerializeField] private TrailRenderer trail;
 
     void Start()
@@ -57,10 +58,12 @@ public class Player : MonoBehaviour
         if (horizontalInput > 0)
         {
             transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            pos.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else if(horizontalInput < 0)
         {
             transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
+            pos.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
     }
