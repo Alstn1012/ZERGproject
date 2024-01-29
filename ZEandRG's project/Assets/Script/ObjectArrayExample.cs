@@ -58,8 +58,7 @@ public class ObjectArrayExample : MonoBehaviour
         }
         else
         {
-            print("클리어");
-/*            SceneManager.LoadScene("신네임");*/
+            SceneManager.LoadScene("ClearScene");
         }
 
 
