@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerStatus : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class playerStatus : MonoBehaviour
         if (playerHp == 0)
         {
             isAlive= false;
-            Destroy(player);
+            SceneManager.LoadScene("gameover");
         }
     }
 }
