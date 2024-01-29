@@ -16,7 +16,7 @@ public class bullet : MonoBehaviour
             collision.gameObject.SetActive(false);
             gameObject.SetActive(false);
         }
-        if(collision.gameObject.tag == "wall")
+        if(collision.gameObject.tag == "wall"||collision.gameObject.tag == "Portal"|| collision.gameObject.tag == "floor")
         {
             gameObject.SetActive(false);
         }
