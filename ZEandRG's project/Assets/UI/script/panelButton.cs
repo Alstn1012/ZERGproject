@@ -15,6 +15,7 @@ public class panelButton : MonoBehaviour
     }
     public void title()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("title");
     }
     public void exit()
