@@ -28,14 +28,13 @@ public class bullet : MonoBehaviour
     void Update()
     {
         RaycastHit2D ray = Physics2D.Raycast(transform.position, transform.right, distance, isLayer);
-        if(ray.collider != null)
+        /**if(ray.collider != null)
         {
             if (ray.collider.tag == "enemy" && ray.collider.tag == "wall")
             {
                 Destroy(gameObject);
             }
-        }
-
+        }**/
         if (transform.rotation.y == 0)
         {
             transform.Translate(transform.right * speed * Time.deltaTime);
@@ -44,7 +43,8 @@ public class bullet : MonoBehaviour
         {
             transform.Translate(transform.right * -1 * speed * Time.deltaTime);
         }
-        
+
+
     }
 
 }

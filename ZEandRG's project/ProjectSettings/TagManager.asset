@@ -17,6 +17,7 @@ TagManager:
   - bullet
   - Portal
   - player_bullet
+  - wall
   layers:
   - Default
   - TransparentFX
