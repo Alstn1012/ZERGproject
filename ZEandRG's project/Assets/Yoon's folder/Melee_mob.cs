@@ -43,7 +43,7 @@ public class Melee_mob : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("attack");
-        playerStatus.instance.playerHp -= 1;
+        //playerStatus.instance.playerHp -= 1;
         Debug.Log("근접 공격!");
     }
 }

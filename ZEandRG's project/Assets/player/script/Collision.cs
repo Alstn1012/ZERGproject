@@ -25,11 +25,20 @@ public class Collision : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "enemy" || collision.gameObject.tag == "bullet")
+        if (collision.gameObject.tag == "bullet")
         {
             if (playerStatus.instance.whileInvincible == false)
             {
                 collision.gameObject.SetActive(false);
+                playerStatus.instance.playerHp -= 1;
+                playerStatus.instance.whileInvincible = true;
+                isAttacked = true;
+            }
+        }
+        if (collision.gameObject.tag == "enemy")
+        {
+            if (playerStatus.instance.whileInvincible == false)
+            {
                 playerStatus.instance.playerHp -= 1;
                 playerStatus.instance.whileInvincible = true;
                 isAttacked = true;
