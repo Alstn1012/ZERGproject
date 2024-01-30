@@ -58,7 +58,7 @@ public class ObjectArrayExample : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("ClearScene");
+            SceneManager.LoadScene("clear");
         }
 
 

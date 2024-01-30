@@ -19,7 +19,7 @@ public class Player_attack : MonoBehaviour
             {
                 if (!playerStatus.instance.ispanelActive)
                 {
-                    Instantiate(bullet, pos.position, Bulletpos.transform.rotation);
+                    Instantiate(bullet, pos.position, Quaternion.identity*Bulletpos.transform.rotation);
                     Shoot_Time = Time.time;
                 }
             }

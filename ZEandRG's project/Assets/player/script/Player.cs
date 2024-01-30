@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         else if(horizontalInput < 0)
         {
             transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
-            pos.transform.rotation = Quaternion.Euler(0, 180, 0);
+            pos.transform.rotation = Quaternion.Euler(0, -1, 0);
         }
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
     }
