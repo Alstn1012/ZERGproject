@@ -799,7 +799,7 @@ GameObject:
   - component: {fileID: 85578718}
   - component: {fileID: 85578717}
   - component: {fileID: 85578722}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Melee_Enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -1294,7 +1294,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.6946564, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.6946564, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1752,7 +1752,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.6946564, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.6946564, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1941,7 +1941,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 912540935}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!212 &282535748
 SpriteRenderer:
@@ -2299,7 +2299,7 @@ GameObject:
   - component: {fileID: 337401159}
   - component: {fileID: 337401163}
   - component: {fileID: 337401164}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dash_Enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -3263,7 +3263,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.6946564, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.6946564, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6122,7 +6122,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.6946564, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.6946564, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7262,7 +7262,6 @@ Transform:
   - {fileID: 1974952226}
   - {fileID: 626729580}
   - {fileID: 765844353}
-  - {fileID: 66273557}
   - {fileID: 1294277131}
   - {fileID: 282535747}
   m_Father: {fileID: 1983633774}
@@ -10679,7 +10678,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 912540935}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1294277132
 SpriteRenderer:
