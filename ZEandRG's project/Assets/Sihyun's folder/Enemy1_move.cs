@@ -44,7 +44,6 @@ public class Enemy1_move : MonoBehaviour
             {
                 GetComponent<Animator>().SetBool("is_idle", false);
                 GetComponent<Animator>().SetBool("is_run", true);
-                
 
                 dash_range += dash_speed * Time.deltaTime;
                 if (dash_dir < 0) {
@@ -54,7 +53,7 @@ public class Enemy1_move : MonoBehaviour
                 {
                     GetComponent<SpriteRenderer>().flipX = true;
                 }
-                this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x + dash_speed*Time.deltaTime* dash_dir, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+                transform.position = new Vector3(transform.position.x + dash_speed*Time.deltaTime* dash_dir, transform.position.y, transform.position.z);
             }
             else
             {
