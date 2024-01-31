@@ -73,6 +73,7 @@ public class Player : MonoBehaviour
         {
             if(jumpCount < jumpLimit)
             {
+                playerStatus.instance.isJump = true;
                 rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
                 jumpCount++;
                 anim.SetBool("jump", true); // 점프 시 에니메이션 
@@ -90,6 +91,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "floor")
         {
+            playerStatus.instance.isJump = false;
             jumpCount = 0;
             anim.SetBool("jump", false); // 비 점프 상태 전환
         }

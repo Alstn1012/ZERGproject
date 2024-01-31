@@ -8,6 +8,7 @@ public class playerStatus : MonoBehaviour
     public bool isAlive;
     public bool whileInvincible;
     public bool isDash;
+    public bool isJump;
     public bool ispanelActive;
     public bool isMapChange;
     public bool pausePanelOff;
